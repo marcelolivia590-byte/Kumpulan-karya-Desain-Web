@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Latihan 3b - Animasi Transisi & Baling-Baling</title>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      margin: 0;
+      background-color: #1e1e1e;
+      color: white;
+      font-family: Arial, sans-serif;
+    }
+
+    .objek {
+      width: 100px;
+      height: 100px;
+      background-color: red;
+      border-radius: 0%;
+      margin: 30px;
+      
+      -webkit-transition: all 0.5s ease;
+      transition: all 0.5s ease;
+    }
+
+    @keyframes berputar {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
+    @media screen and (orientation: landscape) {
+      .objek {
+        width: 160px;
+        height: 60px;
+        background-color: blue; 
+        border-radius: 50%;     
+        
+        animation: berputar 2s linear infinite;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Latihan 3b: Animasi Transisi & Keyframes</h2>
+  <p>Miringkan perangkat / ubah ke mode <b>Landscape</b> untuk melihat perubahan objek menjadi oval biru yang berputar 360 derajat.</p>
+
+  <div class="objek"></div>
+
+</body>
+</html>

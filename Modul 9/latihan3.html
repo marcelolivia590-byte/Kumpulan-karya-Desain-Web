@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Web Storage - Dark Mode</title>
+    <style type="text/css">
+        @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap');
+
+        body {
+            font-family: 'Josefin Sans', sans-serif;
+            background-color: #ffffff;
+            color: #000000;
+            transition: background-color 0.4s, color 0.4s;
+        }
+
+        body.dark-mode {
+            background-color: #121212;
+            color: #ffffff;
+        }
+
+        .label {
+            display: block;
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        .tulisan {
+            text-align: center;
+            margin: auto;
+            border: 2px solid;
+            padding: 20px;
+            width: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%); 
+        }
+
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 60px;
+            height: 34px;
+        }
+
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            -webkit-transition: .4s;
+            transition: .4s;
+            border-radius: 34px;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 26px;
+            width: 26px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            -webkit-transition: .4s;
+            transition: .4s;
+            border-radius: 50%;
+        }
+
+        input:checked + .slider {
+            background-color: #2196F3;
+        }
+
+        input:focus + .slider {
+            box-shadow: 0 0 1px #2196F3;
+        }
+
+        input:checked + .slider:before {
+            -webkit-transform: translateX(26px);
+            -ms-transform: translateX(26px);
+            transform: translateX(26px);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="tulisan">
+        <h1>Universitas Sebelas Maret</h1>
+        <h2>Pendidikan Teknik Informatika dan Komputer</h2>
+        
+        <div class="label">
+            <h3>Dark Mode</h3>
+            <label class="switch">
+                <input type="checkbox" id="themeToggle" onchange="ubahTema(event)">
+                <span class="slider"></span>
+            </label>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        const toggleCheckbox = document.getElementById('themeToggle');
+        const currentTheme = localStorage.getItem('theme');
+        if (currentTheme === 'dark') {
+            document.body.classList.add('dark-mode');
+            toggleCheckbox.checked = true;
+        }
+
+        function ubahTema(e) {
+            if (e.target.checked) {
+                document.body.classList.add('dark-mode');
+                localStorage.setItem('theme', 'dark');
+            } else {
+                document.body.classList.remove('dark-mode');
+                localStorage.setItem('theme', 'light');
+            }
+        }
+    </script>
+</body>
+</html>

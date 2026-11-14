@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Profil PTIK FKIP UNS</title>
+
+    <style>
+        .highlight .important {
+            color: red;
+            background-color: yellow;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>PTIK FKIP UNS</h2>
+
+    <p id="paragraf">
+        <span class="important">Pendidikan Teknik Informatika dan Komputer (PTIK)</span> merupakan program studi yang memadukan bidang <span class="important">teknologi informasi</span> dengan <span class="important">ilmu pendidikan</span>. PTIK tidak hanya mempelajari aspek teknis seperti <span class="important">pemrograman, jaringan komputer, basis data, sistem komputer, dan pengembangan perangkat lunak</span>, tetapi juga membekali mahasiswa dengan kemampuan dalam merancang dan menyampaikan pembelajaran di bidang informatika. Melalui perpaduan tersebut, mahasiswa PTIK dituntut memiliki <span class="important">keterampilan teknis, kemampuan berpikir kritis dan kreatif, serta kemampuan berkomunikasi dan bekerja sama</span>. Lulusan PTIK diharapkan mampu mengikuti perkembangan teknologi sekaligus memiliki kemampuan untuk <span class="important">menerapkan dan mengajarkan teknologi secara efektif</span> dalam lingkungan pendidikan maupun dunia kerja.
+    </p>
+
+    <button onclick="highlight()">Highlight Paragraf</button>
+
+    <script>
+        function highlight() {
+            let paragraf = document.getElementById("paragraf");
+
+            paragraf.classList.toggle("highlight");
+        }
+    </script>
+
+</body>
+</html>

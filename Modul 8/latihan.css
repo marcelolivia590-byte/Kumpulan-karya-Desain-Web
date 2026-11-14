@@ -1,0 +1,31 @@
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #f8f9fa;
+}
+
+.custom-header {
+    background-color: #e0e0e0;
+    border: 2px solid #ccc;
+    color: #333;
+}
+
+.wireframe-box {
+    background-color: #e8e8e8;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+}
+
+.box-title-bar {
+    background-color: #ffffff;
+    border: 1px solid #d0d0d0;
+    color: #333;
+    letter-spacing: 1px;
+}
+
+.custom-footer {
+    background-color: #e0e0e0;
+    border-top: 2px solid #ccc;
+    color: #333;
+}
